@@ -1,0 +1,26 @@
+{
+  "name": "devenv-design-patterns",
+  "version": "1.0.0",
+  "description": "To repozytorium zawiera projekty związane z różnymi wzorcami projektowymi. Pomoże Ci zrozumieć naturę różnych wzorców projektowych i nauczyć się ich używać w prawdziwym projekcie.",
+  "dependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "lint": "npx lerna run lint --stream --parallel",
+    "test": "npx lerna run test --stream"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koniu-dev/devenv-design-patterns.git"
+  },
+  "keywords": [
+    "design",
+    "patterns"
+  ],
+  "author": "Mateusz Konieczny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koniu-dev/devenv-design-patterns/issues"
+  },
+  "homepage": "https://github.com/koniu-dev/devenv-design-patterns#readme"
+}
