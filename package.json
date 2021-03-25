@@ -6,6 +6,7 @@
     "lerna": "^4.0.0"
   },
   "scripts": {
+    "postinstall": "npx lerna bootstrap",
     "lint": "npx lerna run lint --stream --parallel",
     "test": "npx lerna run test --stream"
   },
