@@ -1,9 +1,13 @@
-import { graphBuilder } from '../src/graphBuilder';
+import {
+  graphBuilderWithEdgeStrategy,
+  addDirectedEdgeStrategy,
+  addUndirectedEdgeStrategy,
+} from '../src/graphBuilderWithEdgeStrategy';
 
 describe('graph builder', () => {
   it('should add vertices and directed edges', () => {
     // given
-    const builder = graphBuilder('directed');
+    const builder = graphBuilderWithEdgeStrategy(addDirectedEdgeStrategy);
 
     // when
     const graph = builder
@@ -27,7 +31,7 @@ describe('graph builder', () => {
 
   it('should add vertices and undirected edges', () => {
     // given
-    const builder = graphBuilder('undirected');
+    const builder = graphBuilderWithEdgeStrategy(addUndirectedEdgeStrategy);
 
     // when
     const graph = builder
