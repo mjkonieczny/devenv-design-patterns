@@ -9,25 +9,12 @@ describe('undirected graph builder', () => {
     const graph = builder.build();
 
     // then
-    expect(graph).toMatchObject({});
+    expect(graph).toMatchObject(
+      {}
+    );
   });
 
-  it('should add one vertex', () => {
-    // given
-    const builder = undirectedGraphBuilder();
-
-    // when
-    const graph = builder
-      .addVertex(1)
-      .build();
-
-    // then
-    expect(graph).toMatchObject({
-      1: [],
-    });
-  });
-
-  it('should add one edge', () => {
+  it('should add vertices and edges', () => {
     // given
     const builder = undirectedGraphBuilder();
 
@@ -36,12 +23,18 @@ describe('undirected graph builder', () => {
       .addVertex(1)
       .addVertex(2)
       .addEdge(1, 2)
+      .addVertex(3)
+      .addEdge(1, 3)
+      .addEdge(2, 3)
       .build();
 
     // then
-    expect(graph).toMatchObject({
-      1: [2],
-      2: [1],
-    });
+    expect(graph).toMatchObject(
+      {
+        1: [2, 3],
+        2: [1, 3],
+        3: [1, 2],
+      }
+    );
   });
 });

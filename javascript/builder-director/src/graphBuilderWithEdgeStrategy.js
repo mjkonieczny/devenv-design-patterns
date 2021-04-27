@@ -1,4 +1,4 @@
-export const graphBuilderWithStrategy = (addEdgeStrategy) => {
+export const graphBuilderWithEdgeStrategy = (addEdgeStrategy) => {
   const graph = {};
 
   return {

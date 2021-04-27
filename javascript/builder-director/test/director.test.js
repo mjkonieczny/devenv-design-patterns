@@ -1,7 +1,7 @@
 import { director as createDirector } from '../src/director';
 
 describe('director', () => {
-  it('should add one directed edge', () => {
+  it('should add vertices and directed edges', () => {
     // given
     const director = createDirector('directed');
 
@@ -9,13 +9,16 @@ describe('director', () => {
     const graph = director.buildOneEdgeGraph();
 
     // then
-    expect(graph).toMatchObject({
-      1: [2],
-      2: [],
-    });
+    expect(graph).toMatchObject(
+      {
+        1: [2, 3],
+        2: [3],
+        3: [],
+      }
+    );
   });
 
-  it('should add one undirected edge', () => {
+  it('should add vertices and undirected edges', () => {
     // given
     const director = createDirector('undirected');
 
@@ -23,9 +26,12 @@ describe('director', () => {
     const graph = director.buildOneEdgeGraph();
 
     // then
-    expect(graph).toMatchObject({
-      1: [2],
-      2: [1],
-    });
+    expect(graph).toMatchObject(
+      {
+        1: [2, 3],
+        2: [1, 3],
+        3: [1, 2],
+      }
+    );
   });
 });
