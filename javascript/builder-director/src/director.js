@@ -7,10 +7,10 @@ export const director = (type) => ({
 
     if (type === 'directed') {
       builder = directedGraphBuilder();
-    } else if (type == 'undirected') {
+    } else if (type === 'undirected') {
       builder = undirectedGraphBuilder();
     } else {
-      return {}
+      return {};
     }
 
     return builder
