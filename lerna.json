@@ -1,6 +1,6 @@
 {
   "packages": [
-    "javascript/*"
+    "movies/*"
   ],
   "version": "0.0.0"
 }

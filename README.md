@@ -8,4 +8,4 @@ To repozytorium zawiera materiały stworzone przeze mnie, zachęcam również do
 
 ---
 
-1. [A na co komu Director w Builderze?](./1.%20builder-director)
+1. [A na co komu Director w Builderze?](./movies/1.%20builder-director)
