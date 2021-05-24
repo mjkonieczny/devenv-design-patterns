@@ -8,4 +8,4 @@ To repozytorium zawiera materiały stworzone przeze mnie, zachęcam również do
 
 ---
 
-1. [A na co komu Director w Builderze?](./1.%20builder-director/README.md)
+1. [A na co komu Director w Builderze?](./1.%20builder-director)
